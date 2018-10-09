@@ -1,0 +1,11 @@
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\VirginPulse.exe.config
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\VirginPulse.exe
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\VirginPulse.pdb
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\WebDriver.dll
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\WebDriver.xml
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.csprojAssemblyReference.cache
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.csproj.CoreCompileInputs.cache
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.csproj.CopyComplete
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.exe
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.pdb
+C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\SeleniumExtras.WaitHelpers.dll
