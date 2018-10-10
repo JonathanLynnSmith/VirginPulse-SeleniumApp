@@ -9,3 +9,13 @@ C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.cspr
 C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.exe
 C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\obj\Debug\VirginPulse.pdb
 C:\Users\jls7079\source\repos\VirginPulse\VirginPulse\bin\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\VirginPulse.exe.config
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\VirginPulse.exe
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\VirginPulse.pdb
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\SeleniumExtras.WaitHelpers.dll
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\WebDriver.dll
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\bin\Debug\WebDriver.xml
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\obj\Debug\VirginPulse.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\obj\Debug\VirginPulse.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\obj\Debug\VirginPulse.exe
+C:\Users\Jonathan\Source\Repos\Virgin Pulse\VirginPulse\obj\Debug\VirginPulse.pdb

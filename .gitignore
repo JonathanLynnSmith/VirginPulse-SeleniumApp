@@ -1,2 +1,7 @@
 data.xml
+
 db.lock
+packages/*
+debug/*
+release/*
+
