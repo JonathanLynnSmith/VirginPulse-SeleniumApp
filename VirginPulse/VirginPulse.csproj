@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountInformation.cs" />
+    <Compile Include="Windows.cs" />
     <Compile Include="VirginPulseAutomation.cs" />
     <Compile Include="Settings\VirginPulseAccountSettings.cs" />
     <Compile Include="Program.cs" />
