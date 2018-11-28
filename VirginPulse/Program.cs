@@ -18,7 +18,7 @@ namespace VirginPulse
             else
             {
                 string option = RequestUserInput();
-                AvliableOptions(option);
+                AvaliableOptions(option);
             }
 
             void AutomateVirginPulse()
@@ -43,7 +43,7 @@ namespace VirginPulse
                 return Console.ReadLine();
             }
 
-            void AvliableOptions(string optionSelected)
+            void AvaliableOptions(string optionSelected)
             {
                 if (optionSelected == "1")
                 {
@@ -79,7 +79,7 @@ namespace VirginPulse
                     Console.WriteLine("Invalid Selection, please select a number only");
                     Console.WriteLine("");
                     Console.Write("Please select an option: ");
-                    AvliableOptions(Console.ReadLine());
+                    AvaliableOptions(Console.ReadLine());
                 }
             }
         }

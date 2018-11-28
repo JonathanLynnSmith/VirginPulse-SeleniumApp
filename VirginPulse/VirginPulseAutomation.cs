@@ -14,7 +14,8 @@ namespace VirginPulse
 {
     class VirginPulseAutomation
     {
-        private IWebDriver driver = CreateHeadlessFirefoxDriver();
+        private IWebDriver driver = new FirefoxDriver();
+        //private IWebDriver driver = CreateHeadlessFirefoxDriver();
         private static IWebDriver CreateHeadlessFirefoxDriver()
         {
             var options = new FirefoxOptions();
@@ -27,7 +28,7 @@ namespace VirginPulse
         {
             try
             {
-                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+                WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
                 driver.Navigate().GoToUrl(ConfigurationManager.AppSettings.Get("VirginPulseUrl"));
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.Id(VirginPulseAccountSettings.usernameId)));
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.Id(VirginPulseAccountSettings.passwordId)));
@@ -42,6 +43,7 @@ namespace VirginPulse
                 passwordField.Click();
                 System.Threading.Thread.Sleep(1000);
                 passwordField.SendKeys(myPassword);
+                System.Threading.Thread.Sleep(3000);
                 loginButton.Click();
             }
             catch (Exception ex)
@@ -53,6 +55,7 @@ namespace VirginPulse
         public void CompleteTwoCards()
         {
             ClickCardIcon();
+            ClickCards();
             ClickCards();
             CloseAllModals();
         }
@@ -107,14 +110,20 @@ namespace VirginPulse
                 System.Threading.Thread.Sleep(3000);
                 CloseAllModals();
 
-                IWebElement fisrtCard = null;
+                IWebElement firstCard = null;
                 try
                 {
-                    fisrtCard = driver.FindElement(By.Id("triggerCloseCurtain"));
+                    firstCard = driver.FindElement(By.Id("triggerCloseCurtain"));
                 }
                 catch { }
 
-                if (fisrtCard == null)
+                try
+                {
+                    firstCard = driver.FindElement(By.CssSelector(".quiz-true-false-buttons"));
+                }
+                catch { }
+
+                if (firstCard == null)
                 {
                     try
                     {
@@ -123,38 +132,46 @@ namespace VirginPulse
                     catch { }
                 }
             }
-            catch (Exception ex)
-            {
-                Windows.Log(ex.ToString());
-            }
+            catch{}
 
 
 
         }
         private void ClickCards()
         {
+
             try
             {
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
                 wait.Until(ExpectedConditions.ElementToBeClickable(By.Id("triggerCloseCurtain")));
                 IWebElement dailyTipCards = driver.FindElement(By.Id("triggerCloseCurtain"));
                 dailyTipCards.Click();
+                ClickNextButton();
+                System.Threading.Thread.Sleep(2000);
+            }
+            catch
+            {
+                try
+                {
+                    var trueOrFalseButtons = driver.FindElements(By.CssSelector(".quiz-true-false-buttons"));
+                    trueOrFalseButtons[0].Click();
+                    System.Threading.Thread.Sleep(2000);
+                    WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(5));
+                    wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".got-it-core-button")));
+                    IWebElement dailyTipCards = driver.FindElement(By.CssSelector(".got-it-core-button"));
+                    dailyTipCards.Click();
+                    ClickNextButton();
+                } catch { }
+            }
 
+            void ClickNextButton(){
                 try
                 {
                     IWebElement nextCardButton = driver.FindElement(By.ClassName("next-card-btn"));
                     nextCardButton.Click();
-                }
-                catch { }
-
-                System.Threading.Thread.Sleep(2000);
-                dailyTipCards = driver.FindElement(By.Id("triggerCloseCurtain"));
-                dailyTipCards.Click();
+                } catch { }
             }
-            catch (Exception ex)
-            {
-                Windows.Log(ex.ToString());
-            }
+           
         }
         private void CloseAllModals()
         {
